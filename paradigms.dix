@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+  <alphabet>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz</alphabet>
+  <sdefs>
+    <!-- POS tags -->
+    <sdef n="verb"      c="Verb"/>
+    <sdef n="noun"      c="Noun"/>
+    <sdef n="adj"       c="Adjective"/>
+    
+    <!-- Person tags -->
+    <sdef n="1p"        c="First person"/>
+    <sdef n="2p"        c="Second person"/>
+    <sdef n="3p"        c="Third person"/>
+    
+    <!-- Number tags -->
+    <sdef n="sg"        c="Singular"/>
+    <sdef n="pl"        c="Plural"/>
+    
+    <!-- Verb tense tags -->
+    <sdef n="pres"      c="Present tense"/>
+    <sdef n="pst"       c="Past tense"/>
+    <sdef n="fut"       c="Future tense"/>
+    <sdef n="inf"       c="Infinitive form"/>
+    <sdef n="gnd"       c="Gerund form"/>
+    <sdef n="prog"      c="Progressive form"/>
+    
+    <!-- Adjective degree tags -->
+    <sdef n="base"      c="Base/positive form"/>
+    <sdef n="cmp"       c="Comparative form"/>
+    <sdef n="sup"       c="Superlative form"/>
+  </sdefs>
+  
+  <pardefs>
+    <!-- Regular verb walk -->
+    <pardef n="walk__v">
+      <e>       <p><l></l>          <r><s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>s</l>         <r><s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="pres"/><s n="1p"/><s n="pl"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="pres"/><s n="2p"/><s n="pl"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="pres"/><s n="3p"/><s n="pl"/></r></p></e>
+      <e>       <p><l>ed</l>        <r><s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l></l>          <r><s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>ing</l>       <r><s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>ing</l>       <r><s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular verb run -->
+    <pardef n="r/un__v">
+      <e>       <p><l>un</l>        <r>un<s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l>un</l>        <r>un<s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>un</l>        <r>un<s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>uns</l>       <r>un<s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>an</l>        <r>un<s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l>un</l>        <r>un<s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>unning</l>    <r>un<s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>unning</l>    <r>un<s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular verb eat -->
+    <pardef n="/eat__v">
+      <e>       <p><l>eat</l>       <r>eat<s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l>eat</l>       <r>eat<s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>eat</l>       <r>eat<s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>eats</l>      <r>eat<s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>ate</l>       <r>eat<s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l>eat</l>       <r>eat<s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>eating</l>    <r>eat<s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>eating</l>    <r>eat<s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular verb see -->
+    <pardef n="/see__v">
+      <e>       <p><l>see</l>       <r>see<s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l>see</l>       <r>see<s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>see</l>       <r>see<s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>sees</l>      <r>see<s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>saw</l>       <r>see<s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l>see</l>       <r>see<s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>seeing</l>    <r>see<s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>seeing</l>    <r>see<s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular verb write -->
+    <pardef n="/write__v">
+      <e>       <p><l>write</l>     <r>write<s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l>write</l>     <r>write<s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>write</l>     <r>write<s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>writes</l>    <r>write<s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>wrote</l>     <r>write<s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l>write</l>     <r>write<s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>writing</l>   <r>write<s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>writing</l>   <r>write<s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+  
+    <pardef n="/read__v">
+      <e>       <p><l>read</l>      <r>read<s n="verb"/><s n="inf"/></r></p></e>
+      <e>       <p><l>read</l>      <r>read<s n="verb"/><s n="pres"/><s n="1p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>read</l>      <r>read<s n="verb"/><s n="pres"/><s n="2p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>reads</l>     <r>read<s n="verb"/><s n="pres"/><s n="3p"/><s n="sg"/></r></p></e>
+      <e>       <p><l>read</l>      <r>read<s n="verb"/><s n="pst"/></r></p></e>
+      <e>       <p><l>read</l>      <r>read<s n="verb"/><s n="fut"/></r></p></e>
+      <e>       <p><l>reading</l>   <r>read<s n="verb"/><s n="prog"/></r></p></e>
+      <e>       <p><l>reading</l>   <r>read<s n="verb"/><s n="gnd"/></r></p></e>
+    </pardef>
+    
+    <!-- Regular noun paradigm -->
+    <pardef n="book__n">
+      <e>       <p><l></l>          <r><s n="noun"/><s n="sg"/></r></p></e>
+      <e>       <p><l>s</l>         <r><s n="noun"/><s n="pl"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular noun child/children -->
+    <pardef n="child__n">
+      <e>       <p><l></l>          <r><s n="noun"/><s n="sg"/></r></p></e>
+      <e>       <p><l>ren</l>       <r><s n="noun"/><s n="pl"/></r></p></e>
+    </pardef>
+    
+    <!-- Irregular noun foot/feet -->
+    <pardef n="f/oot__n">
+      <e>       <p><l>oot</l>       <r>oot<s n="noun"/><s n="sg"/></r></p></e>
+      <e>       <p><l>eet</l>       <r>oot<s n="noun"/><s n="pl"/></r></p></e>
+    </pardef>
+    
+    <!-- Regular adjective -->
+    <pardef n="quick__a">
+      <e>       <p><l></l>          <r><s n="adj"/><s n="base"/></r></p></e>
+      <e>       <p><l>er</l>        <r><s n="adj"/><s n="cmp"/></r></p></e>
+      <e>       <p><l>est</l>       <r><s n="adj"/><s n="sup"/></r></p></e>
+    </pardef>
+    
+    <!-- Adjective ending in 'y' -->
+    <pardef n="happ/y__a">
+      <e>       <p><l>y</l>         <r>y<s n="adj"/><s n="base"/></r></p></e>
+      <e>       <p><l>ier</l>       <r>y<s n="adj"/><s n="cmp"/></r></p></e>
+      <e>       <p><l>iest</l>      <r>y<s n="adj"/><s n="sup"/></r></p></e>
+    </pardef>
+    
+    <!-- Adjective with consonant doubling -->
+    <pardef n="bi/g__a">
+      <e>       <p><l>g</l>         <r>g<s n="adj"/><s n="base"/></r></p></e>
+      <e>       <p><l>gger</l>      <r>g<s n="adj"/><s n="cmp"/></r></p></e>
+      <e>       <p><l>ggest</l>     <r>g<s n="adj"/><s n="sup"/></r></p></e>
+    </pardef>
+  </pardefs>
+    
+  <section id="main" type="standard">
+    <!-- Verb entries -->
+    <e lm="walk"><i>walk</i><par n="walk__v"/></e>
+    <e lm="talk"><i>talk</i><par n="walk__v"/></e>
+    <e lm="jump"><i>jump</i><par n="walk__v"/></e>
+    <e lm="run"><i>r</i><par n="r/un__v"/></e>
+    <e lm="eat"><i></i><par n="/eat__v"/></e>
+    <e lm="see"><i></i><par n="/see__v"/></e>
+    <e lm="write"><i></i><par n="/write__v"/></e>
+    <e lm="read"><i></i><par n="/read__v"/></e>
+    
+    <!-- Noun entries -->
+    <e lm="book"><i>book</i><par n="book__n"/></e>
+    <e lm="child"><i>child</i><par n="child__n"/></e>
+    <e lm="cat"><i>cat</i><par n="book__n"/></e>
+    <e lm="dog"><i>dog</i><par n="book__n"/></e>
+    <e lm="house"><i>house</i><par n="book__n"/></e>
+    <e lm="car"><i>car</i><par n="book__n"/></e>
+    <e lm="tree"><i>tree</i><par n="book__n"/></e>
+    <e lm="foot"><i>f</i><par n="f/oot__n"/></e>
+    
+    <!-- Adjective entries -->
+    <e lm="quick"><i>quick</i><par n="quick__a"/></e>
+    <e lm="happy"><i>happ</i><par n="happ/y__a"/></e>
+    <e lm="slow"><i>slow</i><par n="quick__a"/></e>
+    <e lm="big"><i>bi</i><par n="bi/g__a"/></e>
+  </section>
+</dictionary>
