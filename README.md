@@ -1,12 +1,12 @@
 # README.md
 
-## Project Overview
+## Overview
 
-This project implements a basic morphological analyzer/generator using Apertiumâ€™s lttoolbox. The goal was to build comprehensive paradigms and a dictionary covering verbs, nouns, and adjectives according to the assignment instructions for Computational Linguistics (Assignment 3).
+This aims to implement a basic morphological analyzer/generator using Apertiumâ€™s lttoolbox. The goal was to build comprehensive paradigms and a dictionary covering verbs, nouns, and adjectives according to the assignment instructions for CL-1 (Assignment 3).
 
 ## Assignment Requirements vs. Implementation
 
-### Task 1: Building Paradigms (40 Points)
+### Task 1: Building Paradigms
 
 **Assignment Requirements:**
 - **Verb Paradigms:**
@@ -19,7 +19,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 - **Adjective Paradigm:**
   - Standard degree forms (base, comparative, superlative)
 
-**Your Implementation:**
+**My Implementation:**
 - **Verb Paradigm (`walk__v`):**
   - **Tense:** Implements present, past, and future forms.
   - **Aspect:** Provides progressive and gerund forms.
@@ -29,7 +29,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
   - Separate paradigms for verbs like **run**, **eat**, **see**, **write**, and **read** have been defined to handle irregular inflection.
 - **Noun Paradigm:**
   - Implements singular and plural forms.
-  - **Case Markers:** Not included since English (the assumed language) does not have a rich system of case markings (beyond possessive constructions, which are not addressed in this assignment).
+  - **Case Markers:** Not included since English (the assumed language) does not have a rich system of case markings.
 - **Adjective Paradigm:**
   - Three types of adjective paradigms are provided:
     - **Regular adjectives** (`quick__a`)
@@ -37,7 +37,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
     - **Adjectives with consonant doubling** (`bi/g__a`)
   - All three paradigms include base, comparative, and superlative forms.
 
-### Task 2: Building a Dictionary (25 Points)
+### Task 2: Building a Dictionary
 
 **Assignment Requirements:**
 - Minimum 20 entries across different word classes:
@@ -50,7 +50,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 - **Adjective Entries:** 4 entries (`quick`, `happy`, `slow`, `big`).
 - Every dictionary entry is formatted with an `<e>` element containing the lemma (within `<i>`) and a reference to its paradigm (via `<par n="..."/>`).
 
-### Task 3: Implementation and Testing using lttoolbox (35 Points)
+### Task 3: Implementation and Testing using lttoolbox
 
 **Assignment Requirements:**
 - **Morphological Analysis:**
@@ -64,9 +64,10 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 
 **Your Implementation:**
 - The provided XML file implements the paradigms and dictionary needed for analysis and generation.
-- **Testing:**
-  - Although the dictionary file does not include a separate test suite, analysis and generation tests were carried out using lttoolbox commands (e.g., `lt-proc` for analysis and `lt-proc -g` for generation).
-  - Sample tests (with at least 10 word forms for both analysis and generation) were executed, and the results are documented separately in the test files (included in the final zip submission).
+- **Compilation:**
+  - `lt-comp lr paradigms.dix anal.bin` for compiling the morph analyzer and `lt-comp rl paradigms.dix gen.bin` for compiling the morph generator
+  - `echo "test case u wanna run" | lt-proc anal.bin` for morphological analysis of a word, given that it belongs to the dictionary we created, and `echo "test case u wanna run" | lt-proc gen.bin` for morphological generation of a given form of the given stem.
+  - Sample tests (with at least 10 word forms for both analysis and generation) were executed, and the results are documented separately in the test files (included in the zip submission).
 - **Documentation:**
   - This README file explains the design decisions and notes the test procedures, with additional details available in the accompanying test documentation.
 
@@ -74,7 +75,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 
 - **Language Choice:**  
   English was assumed as the target language. This influenced several design decisions:
-  - **Noun Case Markers:** English has minimal case marking (except for possessives), so these were omitted.
+  - **Noun Case Markers:** English has minimal case marking (except for possessives, which were not considered for this assignment by me), so these were omitted.
   - **Perfect Aspect:** The assignment requested perfect aspect forms, but these were excluded since perfect forms in English require auxiliary verbs (e.g., "has walked"). Modeling such constructions falls outside the simple paradigm framework and would complicate the analyzer/generator unnecessarily.
 
 - **Paradigm Naming and Structure:**
@@ -102,7 +103,7 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 
 3. **Morphological Generation:**
    - Run the generator with:  
-     `lt-proc -g dictionary.bin`  
+     `lt-proc dictionary.bin`  
      and then input a lemma with features (e.g., `walk<vblex><past>`) to generate the correct form.
 
 4. **Testing:**
@@ -110,8 +111,9 @@ This project implements a basic morphological analyzer/generator using Apertiumâ
 
 ## File Structure
 
-- **dictionary.dix**: The XML dictionary file containing paradigms and lexical entries.
-- **dictionary.bin**: The compiled binary dictionary (generated via lt-comp).
+- **paradigms.dix**: The XML dictionary file containing paradigms and lexical entries.
+- **anal.bin**: The compiled binary analyzer file.
+- **gen.bin**: The compiled binary generator file.
 - **test/**: Directory containing test files with sample inputs and outputs for both analysis and generation.
 - **README.md**: This documentation file.
 
